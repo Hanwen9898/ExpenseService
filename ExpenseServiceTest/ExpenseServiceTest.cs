@@ -55,12 +55,12 @@ namespace Expense.Service.Test
         [Fact]
         public void Should_throw_unexpected_project_exception_if_project_is_invalid()
         {
-            Project project = new Project(ProjectType.UNEXPECTED_PROJECT_TYPE);
+            Project project = new Project(ProjectType.UNEXPECTED_PROJECT_TYPE, "UNEXPECTED_PROJECT_TYPE");
             // when
-            //Action action = () => ExpenseService.GetExpenseCodeByProjectTypeAndName(project);
-            ExpenseService.GetExpenseCodeByProjectTypeAndName(project);
+            Action action = () => ExpenseService.GetExpenseCodeByProjectTypeAndName(project);
+            //ExpenseService.GetExpenseCodeByProjectTypeAndName(project);
             // then
-            //Assert.Throws<UnexpectedProjectTypeException>(action);
+            Assert.Throws<UnexpectedProjectTypeException>(action);
         }
     }
 }

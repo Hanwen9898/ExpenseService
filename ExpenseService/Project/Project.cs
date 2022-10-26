@@ -3,10 +3,6 @@ namespace Expense.Service.Projects
 {
     public class Project
     {
-        public Project(ProjectType uNEXPECTED_PROJECT_TYPE)
-        {
-        }
-
         public Project(ProjectType projectType, string projectName)
         {
             this.ProjectType = projectType;
